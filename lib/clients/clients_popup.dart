@@ -10,7 +10,7 @@ class Individu extends StatelessWidget {
     return AlertDialog(
       content: SizedBox(
         width: double.maxFinite,
-        height: 300,
+        height: 600,
         child: ListView.builder(
           shrinkWrap: true,
           itemCount: individus.length,
@@ -23,7 +23,7 @@ class Individu extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(individu['Nom'] as String),
-                    SizedBox(width: 8),
+                    SizedBox(width: 4),
                     Text(individu['Prénom'] as String),
                   ],
                 ),
