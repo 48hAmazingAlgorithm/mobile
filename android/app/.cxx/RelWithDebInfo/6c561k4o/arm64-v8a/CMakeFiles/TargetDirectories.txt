@@ -1,0 +1,2 @@
+C:/Users/FX506/Downloads/48h/mobile/android/app/.cxx/RelWithDebInfo/6c561k4o/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/FX506/Downloads/48h/mobile/android/app/.cxx/RelWithDebInfo/6c561k4o/arm64-v8a/CMakeFiles/rebuild_cache.dir

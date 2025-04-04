@@ -1,0 +1,2 @@
+C:/Users/FX506/Downloads/48h/mobile/android/app/.cxx/Debug/5w1b5h3b/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/FX506/Downloads/48h/mobile/android/app/.cxx/Debug/5w1b5h3b/x86_64/CMakeFiles/rebuild_cache.dir
