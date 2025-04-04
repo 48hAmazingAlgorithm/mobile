@@ -18,7 +18,9 @@ class Individu extends StatelessWidget {
             final individu = individus[index];
             return ListTile(
               title: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/photos');
+                },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
