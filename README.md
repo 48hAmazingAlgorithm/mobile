@@ -11,8 +11,6 @@ Avant de pouvoir utiliser ou modifier ce projet, vous devez avoir installé les 
 
 ## Installation
 
-### 1. Cloner le projet
-
 1. Commencez par cloner ce projet sur votre machine :
 
     ```bash
