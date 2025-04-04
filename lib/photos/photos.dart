@@ -1,6 +1,7 @@
+import 'dart:io';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
+import 'package:http/http.dart' as http;
 
 class TakePicture extends StatefulWidget {
   final List<CameraDescription> cameras;
@@ -51,6 +52,23 @@ class _TakePictureState extends State<TakePicture> {
     super.dispose();
   }
 
+  Future<void> _sendImageToBackend(String imagePath) async {
+    final uri = Uri.parse('http://localhost:8080/postPhoto');
+    final request = http.MultipartRequest('POST', uri)
+      ..files.add(await http.MultipartFile.fromPath('photo', imagePath));
+
+    try {
+      final response = await request.send();
+      if (response.statusCode == 200) {
+        print('Image envoyée avec succès');
+      } else {
+        print('Échec de l\'envoi de l\'image: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Erreur lors de l\'envoi de l\'image: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -72,6 +90,7 @@ class _TakePictureState extends State<TakePicture> {
                             await _initializeControllerFuture;
                             final image = await _controller.takePicture();
                             if (!mounted) return;
+                            await _sendImageToBackend(image.path);
                             await Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => DisplayPictureScreen(imagePath: image.path),
