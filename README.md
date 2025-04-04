@@ -15,9 +15,9 @@ Avant de pouvoir utiliser ou modifier ce projet, vous devez avoir installé les 
 
 1. Commencez par cloner ce projet sur votre machine :
 
-```bash
-git clone https://github.com/48hAmazingAlgorithm/mobile.git
-```
+    ```bash
+    git clone https://github.com/48hAmazingAlgorithm/mobile.git
+    ```
 
 2. Installer les dépendances Flutter:
     ```bash
